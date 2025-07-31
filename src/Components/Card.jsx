@@ -1,6 +1,6 @@
 import "../App.css"; // correct relative path from Components/Card.jsx
 
-// 1. func se pass object
+// 1.func se pass object
 
 // const Card = ({name = 'Cardz',price = '90',title = 'No',bg = '#eb8628',img = 'https://plus.unsplash.com/premium_photo-1753420367628-97e66383278f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1M3x8fGVufDB8fHx8fA%3D%3D',addon='yummy'
 // }) => {

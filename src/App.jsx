@@ -60,16 +60,131 @@
 
 import "./App.css"; // Import the CSS
 
+// const App=()=>{
+
+//     const ClickMe=()=>{
+//         console.log("Button is clicked times ")
+//     }
+
+//     return(
+//         <div style={{ padding: "50px 0 0 50px" }}>
+//             <button onClick={ClickMe} className="button-styling">Click Me</button>
+//         </div>
+//     )
+// }
+// export default App
+
+// 4. REACT HOOK USED IN BUTTON FUNCTION FOR RERENDERING in function passes...
+
+import "./App.css"; // Import the CSS
+import { useState } from "react";
+
 const App=()=>{
-
+    const [a,setA]=useState(1)
     const ClickMe=()=>{
-        console.log("Button is clicked times ")
+        console.log("Button pressed")
+        const UpdatedValueOfA = ()=>{return(a+1)} 
+        setA(UpdatedValueOfA)
     }
-
     return(
         <div style={{ padding: "50px 0 0 50px" }}>
-            <button onClick={ClickMe} className="button-styling">Click Me</button>
+             <button onClick={ClickMe} className="button-styling">Click Me</button>
+             <h1> Value of A: {a} </h1>
         </div>
     )
+
 }
 export default App
+
+// task related to button 
+
+
+// import "./App.css"; // Import the CSS
+// import { useState } from "react";
+
+// const App=()=>{
+//     const [a,setA]=useState('👋 👋 Hello World')
+//     const ClickMe=()=>{
+//         console.log("Button pressed")
+//         if(a=='👋 👋 Hello World'){
+//             setA('GoodBye World 👋 👋')
+//         }else{
+//             setA('👋 👋 Hello World')
+//         }
+//     }
+//     return(
+//         <div style={{ padding: "50px 0 0 50px" }}>
+//              <button onClick={ClickMe} className="button-styling">Click Me</button>
+//              <h1>{a}</h1>
+//         </div>
+//     )
+
+// }
+// export default App
+
+// import { useState } from "react";
+// import "./App.css";
+
+// const App = () => {
+//   const [a, setA] = useState("Hello World!");
+
+//   const ClickMe = () => {
+//     console.log("Button pressed");
+//     if (a === "Hello World!") {
+//       setA("Goodbye World!");
+//     } else {
+//       setA("Hello World!");
+//     }
+//   };
+
+//   return (
+//     <div style={{ 
+//       padding: "50px", 
+//       display: "flex", 
+//       flexDirection: "column", 
+//       alignItems: "center", 
+//       justifyContent: "center", 
+//       minHeight: "100vh", 
+//       background: "linear-gradient(to right, #07f7ef, #f7e707)", 
+//       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" 
+//     }}>
+      
+//       <button onClick={ClickMe} className="button-styling">
+//         Click Me!
+//       </button>
+      
+//       <h1 style={{ 
+//         marginTop: "30px", 
+//         fontSize: "2.5rem", 
+//         color: "#333", 
+//         textShadow: "1px 1px 4px rgba(0,0,0,0.2)" 
+//       }}>
+//         {a}
+//       </h1>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+// 5. button with counter without function
+
+//  import { useState } from "react";
+// const App = () => {
+//   const [products, setProducts] = useState(0);
+//   console.log(products);
+
+//   const updatedProducts = () => {
+//     setProducts(products + 10);
+//   };
+
+//   return (
+//     <div>
+//       <h1>{products}</h1>
+//       <button onClick={updatedProducts} className="button-styling">Add 10</button>
+//     </div>
+//   );
+// };
+// export default App
