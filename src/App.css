@@ -53,3 +53,34 @@
   outline: 2px solid #0056b3;
   outline-offset: 2px;
 }
+
+.user-card {
+  width: 260px;
+  padding: 20px;
+  margin: 15px;
+  background: linear-gradient(135deg, #f9f7fa, #e1e8f0);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-left: 6px solid #4f46e5; /* indigo-600 */
+}
+
+.user-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.3);
+  background: linear-gradient(135deg, #ece9f1, #dbe3f0);
+}
+ 
+.user-card h2 {
+  margin: 0 0 12px;
+  color: #4f46e5; /* indigo */
+  font-size: 1.4em;
+}
+
+.user-card p {
+  margin: 6px 0;
+  color: #333;
+  font-size: 1em;
+}   

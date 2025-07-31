@@ -194,82 +194,108 @@
 // 6. Product ki array me update with help of useState function
 
 
-import Card from "./Components/Card";
-import { useState } from "react";
-import "./App.css";
+// import Card from "./Components/Card";
+// import { useState } from "react";
+// import "./App.css";
 
-const App = () => {
-  const [products, setProducts] = useState([
-    {
-      id: "01",
-      price: "200",
-      src: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D",
-      bgcolor: "#f5e942",
-    },
-    {
-      id: "02",
-      price: "100",
-      src: "https://images.unsplash.com/photo-1486944859394-ed1c44255713?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D",
-      bgcolor: "#b042f5",
-    },
-    {
-      id: "03",
-      price: "123",
-      src: "https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D",
-      bgcolor: "#42f2f5",
-    },
-    {
-      id: "04",
-      price: "170",
-      src: "https://images.unsplash.com/photo-1613539246066-78db6ec4ff0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D",
-      bgcolor: "#db5c07",
-    },
-  ]);
+// const App = () => {
+//   const [products, setProducts] = useState([
+//     {
+//       id: "01",
+//       price: "200",
+//       src: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D",
+//       bgcolor: "#f5e942",
+//     },
+//     {
+//       id: "02",
+//       price: "100",
+//       src: "https://images.unsplash.com/photo-1486944859394-ed1c44255713?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D",
+//       bgcolor: "#b042f5",
+//     },
+//     {
+//       id: "03",
+//       price: "123",
+//       src: "https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D",
+//       bgcolor: "#42f2f5",
+//     },
+//     {
+//       id: "04",
+//       price: "170",
+//       src: "https://images.unsplash.com/photo-1613539246066-78db6ec4ff0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D",
+//       bgcolor: "#db5c07",
+//     },
+//   ]);
 
-  const addproducts = () => {
-    setProducts([...products,{
-        id: "05",
-        price: "10",
-        src: "https://plus.unsplash.com/premium_photo-1752502983066-404559a320be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D",
-        bgcolor: "#db078aff",
-      },
-    ]);
-  };
+//   const addproducts = () => {
+//     setProducts([...products,{
+//         id: "05",
+//         price: "10",
+//         src: "https://plus.unsplash.com/premium_photo-1752502983066-404559a320be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D",
+//         bgcolor: "#db078aff",
+//       },
+//     ]);
+//   };
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column", // Stack vertically
-        alignItems: "center",
-        padding: "20px",
-        backgroundColor: "#f4f4f4",
-        minHeight: "100vh",
-      }}
-    >
-      <button onClick={addproducts} className="button-styling">
-        ➕ Add Product
-      </button>
+//   return (
+//     <div
+//       style={{
+//         display: "flex",
+//         flexDirection: "column", // Stack vertically
+//         alignItems: "center",
+//         padding: "20px",
+//         backgroundColor: "#f4f4f4",
+//         minHeight: "100vh",
+//       }}
+//     >
+//       <button onClick={addproducts} className="button-styling">
+//         ➕ Add Product
+//       </button>
 
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          marginTop: "20px",
-        }}
-      >
-        {products.map((product) => (
-          <Card
-            key={product.id}
-            price={product.price}
-            src={product.src}
-            bgcolor={product.bgcolor}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
+//       <div
+//         style={{
+//           display: "flex",
+//           flexWrap: "wrap",
+//           justifyContent: "center",
+//           marginTop: "20px",
+//         }}
+//       >
+//         {products.map((product) => (
+//           <Card
+//             key={product.id}
+//             price={product.price}
+//             src={product.src}
+//             bgcolor={product.bgcolor}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+// 
+// export default App;
 
-export default App;
+
+// 7. User card dynamically 
+
+import UserCard from "./Components/UserCard"
+import { useState } from "react"
+import "./App.css"
+
+const App=()=>{    
+    const [user,setUser]=useState([
+  { name: "John Doe", phoneNo: "2114142", age: "56" },
+  { name: "Ayesha Khan", phoneNo: "03451234567", age: "23" },
+  { name: "Ali Raza", phoneNo: "03119876543", age: "29" },
+  { name: "Sara Ahmed", phoneNo: "03001239876", age: "31" }])
+
+  const adduser=()=>{
+    setUser([{ name: "Tooba Aftab", phoneNo: "42242525", age: "6" },...user])
+  }
+    return(
+        <div>
+            <button onClick={adduser} className="button-styling">Add user</button>
+            {user.map((i,index)=>{return <UserCard key={index} name={i.name} phoneNo={i.phoneNo} age={i.age}/>})}
+        </div>
+    )
+}
+export default App
