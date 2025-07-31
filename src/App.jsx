@@ -32,33 +32,34 @@
 // import Card from "./Components/Card"
 
 // const App = () => {
-//     const CARD_DATA = [
-//         {'id':'01', 'price':'200','src':'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D', 'bgcolor':'#f5e942'},
-//         {'id':'02', 'price':'100','src':'https://images.unsplash.com/photo-1486944859394-ed1c44255713?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D', 'bgcolor':'#b042f5'},
-//         {'id':'03', 'price':'123','src':'https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D', 'bgcolor':'#42f2f5'},
-//         {'id':'04', 'price':'170','src':'https://images.unsplash.com/photo-1613539246066-78db6ec4ff0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D', 'bgcolor':'#db5c07'},
-//     ]
+    // const CARD_DATA = [
+    //     {'id':'01', 'price':'200','src':'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D', 'bgcolor':'#f5e942'},
+    //     {'id':'02', 'price':'100','src':'https://images.unsplash.com/photo-1486944859394-ed1c44255713?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D', 'bgcolor':'#b042f5'},
+    //     {'id':'03', 'price':'123','src':'https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D', 'bgcolor':'#42f2f5'},
+    //     {'id':'04', 'price':'170','src':'https://images.unsplash.com/photo-1613539246066-78db6ec4ff0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D', 'bgcolor':'#db5c07'},
+    // ]
 
-//     return(
-//         <div
-//             style={{
-//             display: "flex",
-//             justifyContent: "center",
-//             alignItems: "center",
-//             flexWrap: "wrap",
-//             minHeight: "100vh",
-//             backgroundColor: "#f4f4f4",
-//       }}
-//         >
-//             {CARD_DATA.map((x,index)=>{return (<Card key={index} id={x.id} price={x.price} src={x.src} bgcolor={x.bgcolor}/>)})}
-//         </div>
-//     )
+    // return(
+    //     <div
+    //         style={{
+    //         display: "flex",
+    //         justifyContent: "center",
+    //         alignItems: "center",
+    //         flexWrap: "wrap",
+    //         minHeight: "100vh",
+    //         backgroundColor: "#f4f4f4",
+    //   }}
+    //     >
+    //         {CARD_DATA.map((x,index)=>{return (<Card key={index} id={x.id} price={x.price} src={x.src} bgcolor={x.bgcolor}/>)})}
+    //     </div>
+    // )
 // }
 // export default App
 
 // 3. Button 
 
-import "./App.css"; // Import the CSS
+// import { useState } from "react";
+// import "./App.css"; // Import the CSS
 
 // const App=()=>{
 
@@ -76,25 +77,25 @@ import "./App.css"; // Import the CSS
 
 // 4. REACT HOOK USED IN BUTTON FUNCTION FOR RERENDERING in function passes...
 
-import "./App.css"; // Import the CSS
-import { useState } from "react";
+// import "./App.css"; // Import the CSS
+// import { useState } from "react";
 
-const App=()=>{
-    const [a,setA]=useState(1)
-    const ClickMe=()=>{
-        console.log("Button pressed")
-        const UpdatedValueOfA = ()=>{return(a+1)} 
-        setA(UpdatedValueOfA)
-    }
-    return(
-        <div style={{ padding: "50px 0 0 50px" }}>
-             <button onClick={ClickMe} className="button-styling">Click Me</button>
-             <h1> Value of A: {a} </h1>
-        </div>
-    )
+// const App=()=>{
+//     const [a,setA]=useState(1)
+//     const ClickMe=()=>{
+//         console.log("Button pressed")
+//         const UpdatedValueOfA = ()=>{return(a+1)} 
+//         setA(UpdatedValueOfA)
+//     }
+//     return(
+//         <div style={{ padding: "50px 0 0 50px" }}>
+//              <button onClick={ClickMe} className="button-styling">Click Me</button>
+//              <h1> Value of A: {a} </h1>
+//         </div>
+//     )
 
-}
-export default App
+// }
+// export default App
 
 // task related to button 
 
@@ -188,3 +189,87 @@ export default App
 //   );
 // };
 // export default App
+
+
+// 6. Product ki array me update with help of useState function
+
+
+import Card from "./Components/Card";
+import { useState } from "react";
+import "./App.css";
+
+const App = () => {
+  const [products, setProducts] = useState([
+    {
+      id: "01",
+      price: "200",
+      src: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D",
+      bgcolor: "#f5e942",
+    },
+    {
+      id: "02",
+      price: "100",
+      src: "https://images.unsplash.com/photo-1486944859394-ed1c44255713?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D",
+      bgcolor: "#b042f5",
+    },
+    {
+      id: "03",
+      price: "123",
+      src: "https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D",
+      bgcolor: "#42f2f5",
+    },
+    {
+      id: "04",
+      price: "170",
+      src: "https://images.unsplash.com/photo-1613539246066-78db6ec4ff0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D",
+      bgcolor: "#db5c07",
+    },
+  ]);
+
+  const addproducts = () => {
+    setProducts([...products,{
+        id: "05",
+        price: "10",
+        src: "https://plus.unsplash.com/premium_photo-1752502983066-404559a320be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D",
+        bgcolor: "#db078aff",
+      },
+    ]);
+  };
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column", // Stack vertically
+        alignItems: "center",
+        padding: "20px",
+        backgroundColor: "#f4f4f4",
+        minHeight: "100vh",
+      }}
+    >
+      <button onClick={addproducts} className="button-styling">
+        ➕ Add Product
+      </button>
+
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          marginTop: "20px",
+        }}
+      >
+        {products.map((product) => (
+          <Card
+            key={product.id}
+            price={product.price}
+            src={product.src}
+            bgcolor={product.bgcolor}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;
