@@ -291,10 +291,14 @@ const App=()=>{
   const adduser=()=>{
     setUser([{ name: "Tooba Aftab", phoneNo: "42242525", age: "6" },...user])
   }
+
+  const callMe=(val)=>{
+    console.log('Function called with value:', val)
+  }
     return(
         <div>
             <button onClick={adduser} className="button-styling">Add user</button>
-            {user.map((i,index)=>{return <UserCard key={index} name={i.name} phoneNo={i.phoneNo} age={i.age}/>})}
+            {user.map((i,index)=>{return <UserCard key={index} kuchBhi={callMe} name={i.name} phoneNo={i.phoneNo} age={i.age}/>})}
         </div>
     )
 }
