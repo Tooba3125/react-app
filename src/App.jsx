@@ -275,8 +275,44 @@
 // export default App;
 
 
-// 7. User card dynamically 
+// 7. User card dynamically and pass function to UserCard 
 
+// import UserCard from "./Components/UserCard"
+// import { useState } from "react"
+// import "./App.css"
+
+// const App=()=>{    
+//     const [user,setUser]=useState([
+//   { name: "John Doe", phoneNo: "2114142", age: "56" },
+//   { name: "Ayesha Khan", phoneNo: "03451234567", age: "23" },
+//   { name: "Ali Raza", phoneNo: "03119876543", age: "29" },
+//   { name: "Sara Ahmed", phoneNo: "03001239876", age: "31" }])
+
+//   const adduser=()=>{
+//     setUser([{ name: "Tooba Aftab", phoneNo: "42242525", age: "6" },...user])
+//   }
+
+//   const callMe=(val)=>{
+//     console.log('Function called with value:', val)
+//   }
+//     return(
+//         <div>
+//             <button onClick={adduser} className="button-styling">Add user</button>
+//             {user.map((i,index)=>{return <UserCard key={index} kuchBhi={callMe} name={i.name} phoneNo={i.phoneNo} age={i.age}/>})}
+//         </div>
+//     )
+// }
+// export default App
+
+// 8.✅ Main Purpose:
+// Displays a list of user cards
+
+// Lets you add a new user using a form popup
+
+// Hides/shows the form using a button or "X" (close)
+
+
+import UserForm from "./Components/UserForm"
 import UserCard from "./Components/UserCard"
 import { useState } from "react"
 import "./App.css"
@@ -286,20 +322,27 @@ const App=()=>{
   { name: "John Doe", phoneNo: "2114142", age: "56" },
   { name: "Ayesha Khan", phoneNo: "03451234567", age: "23" },
   { name: "Ali Raza", phoneNo: "03119876543", age: "29" },
-  { name: "Sara Ahmed", phoneNo: "03001239876", age: "31" }])
+  { name: "Sara Ahmed", phoneNo: "03001239876", age: "31" }]) 
 
-  const adduser=()=>{
-    setUser([{ name: "Tooba Aftab", phoneNo: "42242525", age: "6" },...user])
-  }
+const addUser=(newUser)=>{
+    setUser([newUser, ...user])}
 
-  const callMe=(val)=>{
-    console.log('Function called with value:', val)
-  }
-    return(
-        <div>
-            <button onClick={adduser} className="button-styling">Add user</button>
-            {user.map((i,index)=>{return <UserCard key={index} kuchBhi={callMe} name={i.name} phoneNo={i.phoneNo} age={i.age}/>})}
-        </div>
-    )
+const [isshowform, setIsshowform] = useState(false)
+
+const openForm=()=>{
+    setIsshowform(true)
+}
+
+const closeForm=()=>{
+    setIsshowform(false)
+}
+  return(
+    <div className="card-column-container">
+        <button onClick={openForm} className='button-styling'>Click Me To Add User</button>
+        {user.map((x, index)=>{return <UserCard key={index} user={x}/>})}
+        {/* {user.map((x, index)=>(<UserCard key={index} user={x}/>))} */}
+        {isshowform == true && <UserForm closeForm={closeForm} addUser={addUser} />}
+    </div>
+  )
 }
 export default App
